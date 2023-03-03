@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/screens/description_place_screen.dart';
+import 'package:travel_app/screens/gradient_back.dart';
 import 'package:travel_app/screens/review_list.dart';
 
 void main() {
@@ -18,14 +19,24 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // body: DescriptionPlaceScreen(
-        //   descriptionPlace: descriptionText,
-        //   namePlace: namePlace,
-        //   stars: 5,
-        // ),
+          // body: DescriptionPlaceScreen(
+          //   descriptionPlace: descriptionText,
+          //   namePlace: namePlace,
+          //   stars: 5,
+          // ),
 
-        body: const ReviewList(),
-      ),
+          body: Stack(children: [
+        ListView(
+          children: [
+            DescriptionPlaceScreen(
+                descriptionPlace: descriptionText,
+                namePlace: namePlace,
+                stars: 5),
+            const ReviewList(),
+          ],
+        ),
+        const GradientBack(),
+      ])),
     );
   }
 }
