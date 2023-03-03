@@ -67,7 +67,6 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars,
         description,
-        const Review(),
       ],
     );
   }
