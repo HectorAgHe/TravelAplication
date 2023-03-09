@@ -7,11 +7,11 @@ class CardImageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30.0,
+      height: 320.0,
       child: ListView(
         padding: const EdgeInsets.all(25.0),
         scrollDirection: Axis.horizontal,
-        children: [
+        children: const [
           CardImage(pathImage: 'img/place1.jpg'),
           CardImage(pathImage: 'img/place2.jpg'),
           CardImage(pathImage: 'img/place3.jpg'),
